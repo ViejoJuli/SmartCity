@@ -1,0 +1,369 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "SerializingProducer",
+        "importPath": "confluent_kafka",
+        "description": "confluent_kafka",
+        "isExtraImport": true,
+        "detail": "confluent_kafka",
+        "documentation": {}
+    },
+    {
+        "label": "simplejson",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "simplejson",
+        "description": "simplejson",
+        "detail": "simplejson",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "SparkSession",
+        "importPath": "pyspark.sql",
+        "description": "pyspark.sql",
+        "isExtraImport": true,
+        "detail": "pyspark.sql",
+        "documentation": {}
+    },
+    {
+        "label": "configuration",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "StructType",
+        "importPath": "pyspark.sql.types",
+        "description": "pyspark.sql.types",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.types",
+        "documentation": {}
+    },
+    {
+        "label": "StructField",
+        "importPath": "pyspark.sql.types",
+        "description": "pyspark.sql.types",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.types",
+        "documentation": {}
+    },
+    {
+        "label": "StringType",
+        "importPath": "pyspark.sql.types",
+        "description": "pyspark.sql.types",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.types",
+        "documentation": {}
+    },
+    {
+        "label": "TimestampType",
+        "importPath": "pyspark.sql.types",
+        "description": "pyspark.sql.types",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.types",
+        "documentation": {}
+    },
+    {
+        "label": "DoubleType",
+        "importPath": "pyspark.sql.types",
+        "description": "pyspark.sql.types",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.types",
+        "documentation": {}
+    },
+    {
+        "label": "IntegerType",
+        "importPath": "pyspark.sql.types",
+        "description": "pyspark.sql.types",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.types",
+        "documentation": {}
+    },
+    {
+        "label": "from_json",
+        "importPath": "pyspark.sql.functions",
+        "description": "pyspark.sql.functions",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.functions",
+        "documentation": {}
+    },
+    {
+        "label": "col",
+        "importPath": "pyspark.sql.functions",
+        "description": "pyspark.sql.functions",
+        "isExtraImport": true,
+        "detail": "pyspark.sql.functions",
+        "documentation": {}
+    },
+    {
+        "label": "configuration",
+        "kind": 5,
+        "importPath": "jobs.config",
+        "description": "jobs.config",
+        "peekOfCode": "configuration = {\n    \"AWS_ACCESS_KEY\": \"AKIA57VDLVRW3W2PG54C\",\n    \"AWS_SECRET_KEY\": \"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\",\n}",
+        "detail": "jobs.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_next_time",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))\n    return start_time\ndef generate_gps_data(device_id, timestamp, vehicle_type='private'):\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,\n        'timestamp': timestamp,\n        'speed': random.uniform(0, 40),",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_gps_data",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def generate_gps_data(device_id, timestamp, vehicle_type='private'):\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,\n        'timestamp': timestamp,\n        'speed': random.uniform(0, 40),\n        'direction': 'North-East',\n        'vehicleType': vehicle_type,\n    } \ndef generate_traffic_camera_data(device_id, timestamp, location, camera_id):",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_traffic_camera_data",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def generate_traffic_camera_data(device_id, timestamp, location, camera_id):\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,\n        'timestamp': timestamp,\n        'location': location,\n        'cameraId': camera_id,\n        'snapshot': 'Base64EncodedString',\n    }\ndef generate_weather_data(device_id, timestamp, location):",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_weather_data",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def generate_weather_data(device_id, timestamp, location):\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,\n        'timestamp': timestamp,\n        'location': location,\n        'temperature': random.uniform(-5, 26),\n        'weatherCondition': random.choice(['Sunny', 'Cloudy', 'Rainy', 'Snowy']),\n        'precipitation': random.uniform(0, 25),\n        'windSpeed': random.uniform(0, 100),",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_emergency_incident_data",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def generate_emergency_incident_data(device_id, timestamp, location):\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,\n        'incidentId': uuid.uuid4(),\n        'type': random.choice(['Accident', 'Fire', 'Medical', 'Police', 'None']),\n        'timestamp': timestamp,\n        'location': location,\n        'status': random.choice(['Active', 'Solved']),\n        'description': 'Description of the Incident',",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "simulate_vehicle_movement",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def simulate_vehicle_movement():\n    global start_location\n    start_location['latitude'] += LATITUDE_INCREMENT\n    start_location['longitude'] += LONGITUDE_INCREMENT\n    start_location['latitude'] += random.uniform(-0.0005, 0.0005)\n    start_location['longitude'] += random.uniform(-0.0005, 0.0005)\n    return start_location\ndef generate_vehicle_data(device_id):\n    location = simulate_vehicle_movement()\n    return {",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "generate_vehicle_data",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def generate_vehicle_data(device_id):\n    location = simulate_vehicle_movement()\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,\n        'timestamp': get_next_time().isoformat(),\n        'location': (location['latitude'], location['longitude']),\n        'speed': random.uniform(10, 40),\n        'direction': 'North-East',\n        'make': 'BMW',",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "json_serializer",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def json_serializer(obj):\n    if isinstance(obj, uuid.UUID):\n        return str(obj)\n    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')\ndef delivery_report(err, msg):\n    if err is not None:\n        print(f'Message delivery failed: {err}')\n    else:\n        print(f'Message delivered to {msg.topic()} [{msg.partition()}]')\ndef produce_data_to_kafka(producer, topic, data):",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "delivery_report",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def delivery_report(err, msg):\n    if err is not None:\n        print(f'Message delivery failed: {err}')\n    else:\n        print(f'Message delivered to {msg.topic()} [{msg.partition()}]')\ndef produce_data_to_kafka(producer, topic, data):\n    producer.produce(topic,\n                     key=str(data['id']),\n                     value=json.dumps(data, default=json_serializer).encode('utf-8'),\n                     on_delivery=delivery_report)",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "produce_data_to_kafka",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def produce_data_to_kafka(producer, topic, data):\n    producer.produce(topic,\n                     key=str(data['id']),\n                     value=json.dumps(data, default=json_serializer).encode('utf-8'),\n                     on_delivery=delivery_report)\n    producer.flush()\ndef simulate_journey(producer, device_id):\n    while True:\n        vehicle_data = generate_vehicle_data(device_id)\n        gps_data = generate_gps_data(device_id, vehicle_data['timestamp'])",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "simulate_journey",
+        "kind": 2,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "def simulate_journey(producer, device_id):\n    while True:\n        vehicle_data = generate_vehicle_data(device_id)\n        gps_data = generate_gps_data(device_id, vehicle_data['timestamp'])\n        traffic_camera_data = generate_traffic_camera_data(device_id, vehicle_data['timestamp'], vehicle_data['location'], 'Nikon-Cam123')\n        weather_data = generate_weather_data(device_id, vehicle_data['timestamp'], vehicle_data['location'])\n        emergency_incident_data = generate_emergency_incident_data(device_id, vehicle_data['timestamp'], vehicle_data['location'])\n        produce_data_to_kafka(producer, VEHICLE_TOPIC, vehicle_data)\n        produce_data_to_kafka(producer, GPS_TOPIC, gps_data)\n        produce_data_to_kafka(producer, TRAFFIC_TOPIC, traffic_camera_data)",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "LONDON_COORDINATES",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "LONDON_COORDINATES = {\n    'latitude': 51.5074,\n    'longitude': -0.1278,\n}\nBIRMINGHAM_COORDINATES = {\n    'latitude': 52.4862,\n    'longitude': -1.8904,\n}\n# Calculate movement increment\nLATITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['latitude'] - LONDON_COORDINATES['latitude']) / 100",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "BIRMINGHAM_COORDINATES",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "BIRMINGHAM_COORDINATES = {\n    'latitude': 52.4862,\n    'longitude': -1.8904,\n}\n# Calculate movement increment\nLATITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['latitude'] - LONDON_COORDINATES['latitude']) / 100\nLONGITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['longitude'] - LONDON_COORDINATES['longitude']) / 100\n#Enviroment Variabls for configuration\nKAFKA_BOOSTRAP_SERVERS = os.getenv('KAFKA_BOOSTRAP_SERVERS', 'localhost: 9092')\nVEHICLE_TOPIC = os.getenv('VEHICLE_TOPIC', 'vehicle_data')",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "LATITUDE_INCREMENT",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "LATITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['latitude'] - LONDON_COORDINATES['latitude']) / 100\nLONGITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['longitude'] - LONDON_COORDINATES['longitude']) / 100\n#Enviroment Variabls for configuration\nKAFKA_BOOSTRAP_SERVERS = os.getenv('KAFKA_BOOSTRAP_SERVERS', 'localhost: 9092')\nVEHICLE_TOPIC = os.getenv('VEHICLE_TOPIC', 'vehicle_data')\nGPS_TOPIC = os.getenv('GPS_TOPIC', 'gps_data')\nTRAFFIC_TOPIC = os.getenv('TRAFFIC_TOPIC', 'traffic_data')\nWEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "LONGITUDE_INCREMENT",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "LONGITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['longitude'] - LONDON_COORDINATES['longitude']) / 100\n#Enviroment Variabls for configuration\nKAFKA_BOOSTRAP_SERVERS = os.getenv('KAFKA_BOOSTRAP_SERVERS', 'localhost: 9092')\nVEHICLE_TOPIC = os.getenv('VEHICLE_TOPIC', 'vehicle_data')\nGPS_TOPIC = os.getenv('GPS_TOPIC', 'gps_data')\nTRAFFIC_TOPIC = os.getenv('TRAFFIC_TOPIC', 'traffic_data')\nWEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "KAFKA_BOOSTRAP_SERVERS",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "KAFKA_BOOSTRAP_SERVERS = os.getenv('KAFKA_BOOSTRAP_SERVERS', 'localhost: 9092')\nVEHICLE_TOPIC = os.getenv('VEHICLE_TOPIC', 'vehicle_data')\nGPS_TOPIC = os.getenv('GPS_TOPIC', 'gps_data')\nTRAFFIC_TOPIC = os.getenv('TRAFFIC_TOPIC', 'traffic_data')\nWEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "VEHICLE_TOPIC",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "VEHICLE_TOPIC = os.getenv('VEHICLE_TOPIC', 'vehicle_data')\nGPS_TOPIC = os.getenv('GPS_TOPIC', 'gps_data')\nTRAFFIC_TOPIC = os.getenv('TRAFFIC_TOPIC', 'traffic_data')\nWEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "GPS_TOPIC",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "GPS_TOPIC = os.getenv('GPS_TOPIC', 'gps_data')\nTRAFFIC_TOPIC = os.getenv('TRAFFIC_TOPIC', 'traffic_data')\nWEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "TRAFFIC_TOPIC",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "TRAFFIC_TOPIC = os.getenv('TRAFFIC_TOPIC', 'traffic_data')\nWEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))\n    return start_time",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "WEATHER_TOPIC",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "WEATHER_TOPIC = os.getenv('WEATHER_TOPIC', 'weather_data')\nEMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))\n    return start_time\ndef generate_gps_data(device_id, timestamp, vehicle_type='private'):",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "EMERGENCY_TOPIC",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "EMERGENCY_TOPIC = os.getenv('EMERGENCY_TOPIC', 'emergency_data')\nstart_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))\n    return start_time\ndef generate_gps_data(device_id, timestamp, vehicle_type='private'):\n    return {",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "start_time",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "start_time = datetime.datetime.now()\nstart_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))\n    return start_time\ndef generate_gps_data(device_id, timestamp, vehicle_type='private'):\n    return {\n        'id': uuid.uuid4(),",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "start_location",
+        "kind": 5,
+        "importPath": "jobs.main",
+        "description": "jobs.main",
+        "peekOfCode": "start_location = LONDON_COORDINATES.copy()\nrandom.seed(42)\ndef get_next_time():\n    global start_time\n    start_time += datetime.timedelta(seconds=random.randint(30, 60))\n    return start_time\ndef generate_gps_data(device_id, timestamp, vehicle_type='private'):\n    return {\n        'id': uuid.uuid4(),\n        'deviceId': device_id,",
+        "detail": "jobs.main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "jobs.spark-city",
+        "description": "jobs.spark-city",
+        "peekOfCode": "def main():\n    spark = SparkSession.builder.appName(\"SmartCityStreaming\")\\\n    .config(\"spark.jars.packages\", \"org.apache.spark:spark-sql-kafka-0-10_2.13:3.5.0\",\n            \"org.apache.hadoop:hadoop-aws:3.3.1\",\n            \"com.amazonaws:aws-java-sdk:1.11.469\")\\\n    .config(\"spark.hadoop.fs.s3a.impl2\", \"org.apache.hadoop.fs.s3a.S3AFileSystem\")\\\n    .config(\"spark.hadoop.fs.s3a.access.key\", configuration.get('AWS_ACCESS_KEY'))\\\n    .config(\"spark.hadoop.fs.s3a.secret.key\", configuration.get('AWS_SECRET_KEY'))\\\n    .config(\"spark.hadoop.fs.s3a.aws.credentials.provider\", \"org.apache.hadoop.fs.s3a.impl.SimpleAWSCredentialsProvider\")\\\n    .getOrCreate()",
+        "detail": "jobs.spark-city",
+        "documentation": {}
+    }
+]
