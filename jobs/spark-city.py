@@ -10,7 +10,7 @@ def main():
     .config("spark.hadoop.fs.s3a.impl2", "org.apache.hadoop.fs.s3a.S3AFileSystem")\
     .config("spark.hadoop.fs.s3a.access.key", configuration.get('AWS_ACCESS_KEY'))\
     .config("spark.hadoop.fs.s3a.secret.key", configuration.get('AWS_SECRET_KEY'))\
-    .config("spark.hadoop.fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.impl.SimpleAWSCredentialsProvider")\
+    .config("spark.hadoop.fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider")\
     .getOrCreate()
 
     # Adjust Log Level
@@ -87,7 +87,7 @@ def main():
                .selectExpr('CAST(value AS STRING)')
                .select(from_json(col('value'), schema).alias('data'))
                .select('data.*')
-               .withWaterMark('timestamp', '2 minutes'))
+               .withWatermark('timestamp', '2 minutes'))
 
     def streamWriter(input, checkpointFolder, output):
         return(input.writeStream

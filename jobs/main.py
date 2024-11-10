@@ -1,4 +1,5 @@
 import os
+import time
 from confluent_kafka import SerializingProducer
 import simplejson as json
 import datetime
@@ -142,7 +143,7 @@ def simulate_journey(producer, device_id):
         produce_data_to_kafka(producer, WEATHER_TOPIC, weather_data)
         produce_data_to_kafka(producer, EMERGENCY_TOPIC, emergency_incident_data)
 
-        break
+        time.sleep(5)
 
 if __name__ == '__main__':
     producer_config = {

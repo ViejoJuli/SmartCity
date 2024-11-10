@@ -4,7 +4,7 @@ x-spark-common: &spark-common # I could put any name here, x is for custom ancho
   image: bitnami/spark:latest
   volumes:
       - ./jobs:/opt/bitnami/spark/jobs
-  command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark:master:7077
+  command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
   depends_on:
     - spark-master
   environment:
