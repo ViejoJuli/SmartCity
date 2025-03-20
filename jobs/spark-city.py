@@ -4,7 +4,7 @@ from pyspark.sql.types import StructType, StructField, StringType, TimestampType
 from pyspark.sql.functions import from_json, col
 def main():
     spark = SparkSession.builder.appName("SmartCityStreaming")\
-    .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.13:3.5.0,"
+    .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0,"
             "org.apache.hadoop:hadoop-aws:3.3.1,"
             "com.amazonaws:aws-java-sdk:1.11.469")\
     .config("spark.hadoop.fs.s3a.impl2", "org.apache.hadoop.fs.s3a.S3AFileSystem")\
